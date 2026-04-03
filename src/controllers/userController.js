@@ -45,10 +45,68 @@ const getUserById= (req, res)=>{
     return res.json(user)
 }
 
+const updateUser=(req,res) =>{
+
+    const {id} = req.params
+
+   const{
+
+    name,
+    idade
+
+   } = req.body
+
+   const userToUpdate= {
+   
+    name:name,
+    idade:idade
+
+   }
+     
+  const updateUser = userModel.update(id,userToUpdate)
+
+   if( !updateUser){
+        res.status(404).json({
+            message:" USUÁRIO NÃO ENCONTRADO. PARA DE SER BURRO E DIGITE  CERTO OS ID"
+        })
+    }
+
+
+  return res.json(updateUser)
+
+}
+
+
+
+
+const deleteUser= (req, res) =>{
+
+    const id = Number (req.params.id)
+
+   const user = userModel.remove(id)
+
+   if( !user){
+        res.status(404).json({
+            message:" USUÁRIO NÃO ENCONTRADO. PARA DE SER BURRO E DIGITE  CERTO OS ID"
+        })
+    }
+
+
+
+ 
+ 
+   return res.json(user)
+
+}
+
+
+
 
  module.exports = {
     getAllUsers,
     createUser,
-    getUserById
+    getUserById,
+    updateUser,
+    deleteUser
 }
  

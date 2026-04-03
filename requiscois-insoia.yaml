@@ -10,7 +10,7 @@ collection:
   - url: localhost:3000
     name: backend -pw3
     meta:
-      id: req_1d1321f8468945149dc683e95ac598a9
+      id: req_3e1254a1a0c548a6a70651e80c8f74eb
       created: 1773959869162
       modified: 1773960624038
       isPrivate: false
@@ -30,12 +30,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: localhost:3000/users
+  - url: localhost:3000/users/1
     name: lista de users
     meta:
-      id: req_76a0a2ae509143ec862b58de60c3e624
+      id: req_979f80abd437496eaf86be06fc8e40df
       created: 1773960860629
-      modified: 1774572898822
+      modified: 1775176226205
       isPrivate: false
       description: ""
       sortKey: -1773960860629
@@ -61,9 +61,9 @@ collection:
   - url: localhost:3000/users
     name: " cadastro de users"
     meta:
-      id: req_b7c09e80603b4c3c841e1e04fcfd5ea9
+      id: req_5916852d4fce40b2bcb1fbcf0dee6e49
       created: 1773960954867
-      modified: 1774572909149
+      modified: 1775175950104
       isPrivate: false
       description: ""
       sortKey: -1773960954867
@@ -92,12 +92,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: localhost:3000/users/5
-    name: bsuca users/id
+  - url: localhost:3000/users/1
+    name: busca de users
     meta:
-      id: req_650db0e8a5e74a1aa0054c3723d30a92
+      id: req_169d5539c9e647e187f0a7dba07b7c6f
       created: 1774570474828
-      modified: 1774573029626
+      modified: 1775177805039
       isPrivate: false
       description: ""
       sortKey: -1774570474828
@@ -115,12 +115,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: localhost:3000/users/
+  - url: localhost:3000/users/1
     name: new user
     meta:
-      id: req_ef3ce14ca8214d46b9ab5c13e2fc81c2
+      id: req_55a27fbabe6b41ada53097a6b6e927c1
       created: 1774572302728
-      modified: 1774572354846
+      modified: 1775176219244
       isPrivate: false
       description: ""
       sortKey: -1774572302728
@@ -138,16 +138,73 @@ collection:
         send: true
         store: true
       rebuildPath: true
+  - url: localhost:3000/users/1
+    name: atualiza user
+    meta:
+      id: req_2ecb7e17affe440a94c57973ea829da0
+      created: 1775172298035
+      modified: 1775176749326
+      isPrivate: false
+      description: ""
+      sortKey: -1774265714847.5
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	
+        	"name" : "kka",
+        	"idade": 74
+        	
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:3000/users/1
+    name: remove users
+    meta:
+      id: req_4a0be153c267479ba17e765c68d4bb96
+      created: 1775177642138
+      modified: 1775177827946
+      isPrivate: false
+      description: ""
+      sortKey: -1774418094837.75
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
     id: jar_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1774564235395
-    modified: 1774564235395
+    created: 1775169887967
+    modified: 1775169887967
 environments:
   name: Base Environment
   meta:
     id: env_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1774564235391
-    modified: 1774564235391
+    created: 1775169887965
+    modified: 1775169887965
     isPrivate: false
